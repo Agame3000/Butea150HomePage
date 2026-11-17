@@ -1,0 +1,61 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.background {
+    background-image: url('res/icon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #443b3b;
+    image-rendering: pixelated;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+}
+
+.main-header {
+    transform: rotate(10deg);
+    
+    color: #ff4242;
+    font-size: 3.5rem;
+    font-family: sans-serif;
+    text-align: center;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.supertext {
+    background: linear-gradient(
+    45deg, 
+    #ff1717,
+    #ff6b16,
+    #ffae4b,
+    #ff1717,
+    #ff6b16,
+    #ffae4b,
+    #ff1717
+    );
+
+    background-size: 200% 200%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.6));
+    
+    animation: gradientFlow 6s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
